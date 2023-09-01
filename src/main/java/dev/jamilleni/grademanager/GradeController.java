@@ -16,7 +16,6 @@ public class GradeController {
     public String getForm(Model model, @RequestParam(required = false) String id) {
         int index = getGradeIndex(id);
         model.addAttribute("grade", index == Constants.NOTFOUND ? new Grade() : gradeList.get(index));
-
         return "form";
     }
 
@@ -29,7 +28,6 @@ public class GradeController {
         } else {
             gradeList.set(index, grade);
         }
-
         return "redirect:/grades";
     }
 
@@ -43,10 +41,11 @@ public class GradeController {
     public int getGradeIndex(String id) {
 
         for (int i = 0; i < gradeList.size(); i++) {
-            if (gradeList.get(i).getId().equals(id))
+            if (gradeList.get(i).getId().equals(id)){
                 return i;
+            }
         }
-        
+
         return Constants.NOTFOUND;
     }
 }
