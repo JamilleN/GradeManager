@@ -10,6 +10,14 @@ public class Grade {
     private String id;
 
     public Grade() {
+        this("", "", "", "");
+    }
+
+    public Grade(String name, String courseCode, String courseName, String score) {
+        this.name = name;
+        this.courseCode = courseCode;
+        this.courseName = courseName;
+        this.score = score;
         this.id = UUID.randomUUID().toString();
     }
 

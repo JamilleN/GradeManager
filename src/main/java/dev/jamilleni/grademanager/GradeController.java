@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class GradeController {
-    List<Grade> gradeList = new ArrayList<>();
+    List<Grade> gradeList = new ArrayList<>(Arrays.asList(
+        new Grade("Jamille", "EECS 1019", "Discrete Math for Computer Science", "A+"),
+        new Grade("Jamille", "EECS 2030", "Advanced Object Oriented Programming", "A+"))
+        );
 
     @GetMapping("/")
     public String getForm(Model model, @RequestParam(required = false) String id) {
