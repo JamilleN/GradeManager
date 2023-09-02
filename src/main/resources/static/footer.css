@@ -1,0 +1,25 @@
+.footer {
+    position: fixed;
+    bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer_text{
+    color: white;
+    margin: 0 0.5rem;
+  }
+  
+  .fa {
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  .fa:hover {
+    color: red;
+  }
